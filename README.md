@@ -65,3 +65,24 @@ co(function *() {
   var res = yield parallel(reqs, 2);
 })();
 ```
+
+# Sequelize
+
+```js
+var task = Task.build({ title: 'foo', description: 'bar', deadline: new Date() })
+task.save();
+
+vas task = Task.create({ title: 'foo', description: 'bar', deadline: new Date() });
+
+task.title = "b";
+task.save();
+
+task.updateAttributes({title: "b"})
+
+task.destroy();
+
+
+User.bulkCreate([{ username: 'barfooz', isAdmin: true }, { username: 'foo', isAdmin: true }])
+User.update({title: "B"}, {id: 1})
+
+```
